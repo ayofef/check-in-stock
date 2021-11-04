@@ -10,6 +10,6 @@ async function go() {
 async function stillRunningNotify() {
     sendMessage("Backend job is still running in case you are wondering.. :) ", { disable_notification: true, dev: true });
 }
-
-cron.schedule("*/5 * * * *", go);
+sendMessage("HEROKU live!!!!! ", { disable_notification: true, dev: true });
+cron.schedule("* * * * *", go);
 cron.schedule("0 * * * *", stillRunningNotify);
