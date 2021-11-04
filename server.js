@@ -5,11 +5,11 @@ import { checkIconnect } from "./apis/checkIconnect.js";
 
 async function go() {
     checkGuinessStoreHouse();
-    checkIconnect();
+    // checkIconnect();
 }
 async function stillRunningNotify() {
     sendMessage("Backend job is still running in case you are wondering.. :) ", { disable_notification: true, dev: true });
 }
-sendMessage("HEROKU live!!!!! ", { disable_notification: true, dev: true });
-cron.schedule("* * * * *", go);
+
+cron.schedule("*/5 * * * *", go);
 cron.schedule("0 * * * *", stillRunningNotify);
