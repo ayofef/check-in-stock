@@ -4,6 +4,7 @@ import { checkGuinessStoreHouse } from "./apis/guinessNitrosurge.js";
 import { checkIconnect } from "./apis/checkIconnect.js";
 
 async function go() {
+    console.log("Starting up...");
     checkGuinessStoreHouse();
     // checkIconnect();
 }
