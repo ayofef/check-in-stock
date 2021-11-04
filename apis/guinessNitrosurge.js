@@ -11,6 +11,8 @@ ${soldOut ? "" : `<a href="${guinessNitrosurgeUrl}">Check it out</a>`}
 `;
 
 export async function checkGuinessStoreHouse() {
+    console.log("Starting up...");
+
     const dom = await scrapper({ url: guinessNitrosurgeUrl });
     const x = [...dom.window.document.querySelectorAll(".product-wrap")];
 
